@@ -111,7 +111,7 @@ function drawHeadline(nowMs) {
     const now = new Date();
     const hue = (now.getSeconds() * 6 + (nowMs * 0.01)) % 360;
     const title = "Happy New Year";
-    const year = String(now.getFullYear() + 1);
+    const year = String(now.getFullYear());
 
     // glow layer
     ctx.save();
