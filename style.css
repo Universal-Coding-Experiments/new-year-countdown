@@ -1,0 +1,61 @@
+:root {
+      --bg: #05010a;
+      --panel: rgba(0, 0, 0, 0.42);
+      --muted: rgba(255, 255, 255, 0.85);
+      --accent: #ffd166;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      overflow: hidden;
+      font-family: system-ui;
+    }
+
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh
+    }
+
+    #elapsed {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      background: var(--panel);
+      color: var(--muted);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.25;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(6px);
+      white-space: pre;
+      min-width: 240px;
+      max-width: 44vw;
+    }
+
+    .label {
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.3px;
+      margin-bottom: 6px;
+      display: block
+    }
+
+    .value {
+      font-weight: 700;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+      display: block
+    }
+
+    @media (max-width:640px) {
+      #elapsed {
+        font-size: 13px;
+        padding: 8px 10px;
+        max-width: 68vw
+      }
+    }
